@@ -4,6 +4,7 @@ import com.qaprosoft.carina.core.foundation.IAbstractTest;
 import com.qaprosoft.gui.components.ProductItem;
 import com.qaprosoft.gui.components.CartActions;
 import com.qaprosoft.gui.pages.MainPage;
+import com.qaprosoft.gui.pages.SearchPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -33,4 +34,20 @@ public class MainPageTest implements IAbstractTest {
         softAssert.assertEquals(message,"Product successfully added to your shopping cart");
         softAssert.assertAll();
     }
+    @Test()
+    public void ItemsSearchFunctionality() {
+        MainPage mainPage = new MainPage(getDriver());
+        mainPage.open();
+        //Search for item
+        mainPage.searchProduct("dress");
+
+        SearchPage searchPage = new SearchPage(getDriver());
+
+        String message = searchPage.getSearchResult();
+
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertEquals(message,"7 results have been found.");
+        softAssert.assertAll();
+    }
+
 }
