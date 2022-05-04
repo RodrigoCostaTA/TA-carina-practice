@@ -1,6 +1,7 @@
 package com.qaprosoft.gui.pages;
 
 import com.qaprosoft.carina.core.gui.AbstractPage;
+import com.qaprosoft.gui.components.Category;
 import com.qaprosoft.utils.Utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -46,4 +47,27 @@ public class MainPage extends AbstractPage {
         searchField.sendKeys(productName);
         searchBtn.click();
     }
+
+    @FindBy(xpath = "//*[@id=\"block_top_menu\"]/ul/li[1]/a")
+    private WebElement womenTab;
+
+    @FindBy(xpath = "//*[@id=\"block_top_menu\"]/ul/li[2]/a")
+    private WebElement dressesTab;
+
+    @FindBy(xpath = "//*[@id=\"block_top_menu\"]/ul/li[3]/a")
+    private WebElement tshirtsTab;
+
+    public void clickWomenTab() {
+        womenTab.click();
+    }
+    public void clickDressesTab() {
+        dressesTab.click();
+    }
+
+    public void clickTshirtsTab() {
+        tshirtsTab.click();
+    }
+
+
+
 }

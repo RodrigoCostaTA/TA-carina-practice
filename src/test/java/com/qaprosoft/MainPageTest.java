@@ -1,6 +1,7 @@
 package com.qaprosoft;
 
 import com.qaprosoft.carina.core.foundation.IAbstractTest;
+import com.qaprosoft.gui.components.Category;
 import com.qaprosoft.gui.components.ProductItem;
 import com.qaprosoft.gui.components.CartActions;
 import com.qaprosoft.gui.pages.MainPage;
@@ -49,5 +50,22 @@ public class MainPageTest implements IAbstractTest {
         softAssert.assertEquals(message,"7 results have been found.");
         softAssert.assertAll();
     }
+    @Test()
+    public void topMenuFunctionality() {
+        MainPage mainPage = new MainPage(getDriver());
+        mainPage.open();
+        Category category = new Category(getDriver());
+        SoftAssert softAssert = new SoftAssert();
+        String message;
 
+        mainPage.clickWomenTab();
+        softAssert.assertEquals (message = category.getCategoryName(), "Women");
+
+        mainPage.clickDressesTab();
+        softAssert.assertEquals (message = category.getCategoryName(), "Dresses");
+
+        mainPage.clickTshirtsTab();
+        softAssert.assertEquals (message = category.getCategoryName(), "T-shirts");
+        softAssert.assertAll();
+    }
 }
