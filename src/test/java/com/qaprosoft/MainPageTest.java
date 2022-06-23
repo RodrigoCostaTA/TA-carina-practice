@@ -1,16 +1,8 @@
 package com.qaprosoft;
-
-<<<<<<< Updated upstream
-import com.qaprosoft.carina.core.foundation.IAbstractTest;
-import com.qaprosoft.gui.components.ProductItem;
-import com.qaprosoft.gui.components.CartActions;
-import com.qaprosoft.gui.pages.MainPage;
-=======
 import com.qaprosoft.gui.pages.common.MainPageBase;
 import com.qaprosoft.gui.pages.common.ProductDetailsPageBase;
 import com.qaprosoft.gui.pages.common.SearchPageBase;
 import com.qaprosoft.gui.pages.common.component.BlockTopMenuBase;
->>>>>>> Stashed changes
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -26,8 +18,6 @@ public class MainPageTest extends BaseWebTest {
         mainPage.open();
         Assert.assertTrue(mainPage.isPageOpened(), "Home page is not opened.");
     }
-<<<<<<< Updated upstream
-=======
 
     @Test()
     public void itemsSearchFunctionality() {
@@ -49,5 +39,4 @@ public class MainPageTest extends BaseWebTest {
     public void addRandomItemToCart(){
         ProductDetailsPageBase productDetailsPageBase = mainPage.clickItem();
     }
->>>>>>> Stashed changes
 }

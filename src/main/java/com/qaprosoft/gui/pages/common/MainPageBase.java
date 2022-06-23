@@ -1,6 +1,5 @@
 package com.qaprosoft.gui.pages.common;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public abstract class MainPageBase extends BasicPageBase {
