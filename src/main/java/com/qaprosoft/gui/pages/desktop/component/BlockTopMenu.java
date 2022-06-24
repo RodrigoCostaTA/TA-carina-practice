@@ -13,13 +13,13 @@ public class BlockTopMenu extends BlockTopMenuBase {
         super(driver);
     }
 
-    @FindBy(xpath = "//*[@text=\"Women\"]")
+    @FindBy(xpath = "//*[@title=\"Women\"]")
     private ExtendedWebElement womenTab;
 
-    @FindBy(xpath = "//*[@text=\"Women\"]")
+    @FindBy(xpath = "//*[@title=\"Dresses\"]")
     private ExtendedWebElement dressesTab;
 
-    @FindBy(xpath = "//*[@text=\"T-shirts\"]")
+    @FindBy(xpath = "//*[@title=\"T-shirts\"]")
     private ExtendedWebElement tshirtsTab;
 
     @Override

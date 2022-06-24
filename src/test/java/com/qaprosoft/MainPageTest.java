@@ -29,7 +29,7 @@ public class MainPageTest extends BaseWebTest {
     @Test()
     public void blockTopMenuFunctionality() {
 
-        BlockTopMenuBase blockTopMenuBase = initPage(BlockTopMenuBase.class);
+        BlockTopMenuBase blockTopMenuBase = mainPage.getBlockTopMenu();
         blockTopMenuBase.clickWomenTab();
         blockTopMenuBase.clickDressesTab();
         blockTopMenuBase.clickTshirtsTab();

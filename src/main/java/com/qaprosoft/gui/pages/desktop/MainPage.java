@@ -5,6 +5,7 @@ import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebEleme
 import com.qaprosoft.gui.pages.common.MainPageBase;
 import com.qaprosoft.gui.pages.common.ProductDetailsPageBase;
 import com.qaprosoft.gui.pages.common.SearchPageBase;
+import com.qaprosoft.gui.pages.common.component.BlockTopMenuBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 
@@ -40,5 +41,10 @@ public class MainPage extends MainPageBase {
         searchField.type(productName);
         searchBtn.click();
         return initPage(SearchPageBase.class);
+    }
+
+    @Override
+    public BlockTopMenuBase getBlockTopMenu(){
+        return initPage(BlockTopMenuBase.class);
     }
 }
